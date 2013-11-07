@@ -1,7 +1,8 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new order..." %>
+    <%= f.text_area :content, placeholder: "Compose new order... (Example: 5P / 7I / 6S / 3H 
+	Replacements: 1P / 2H)" %>
   </div>
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>
