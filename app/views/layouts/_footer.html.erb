@@ -1,12 +1,18 @@
+<% if signed_in? %>
+
 <footer class="footer">
   <small>
-	  Streamline 
+	  Streamlined
+	  
+	  <%= link_to image_tag("twitterimg.png", alt: "TwitterImg"), 'https://twitter.com/RollTrees' %>
   </small>
   <nav>
     <ul>
       <li><%= link_to "About",   about_path %></li>
       <li><%= link_to "Contact", contact_path %></li>
-      <li><a href="http://420list.com/">News</a></li>
+      <li><a href="http://420list.com/news/">News</a></li>
     </ul>
   </nav>
 </footer>
+
+<% end %>
