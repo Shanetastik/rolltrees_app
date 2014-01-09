@@ -1,5 +1,18 @@
 <% provide(:title, 'Contact') %>
-<h1>Contact</h1>
-<p>
-	You can always reach out to us via <a href="https://twitter.com/RollTrees">Twitter</a> if you're into that sort of thing.  Otherwise, feel free to send us an email at rolltrees@gmail.com.
-</p>
+<h1>Contact Us</h1>
+
+<% form_tag(:action => 'contact_me') %>
+<table>
+<tr>
+  <td><%= label_tag(:name) %></td>
+  <td><%= text_field_tag(:name) %></td>
+</tr>
+<tr>
+  <td><%= label_tag(:cell) %></td>
+  <td><%= text_field_tag(:cell) %></td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td><%= submit_tag("Send Info") %></td>
+</tr>
+</table>

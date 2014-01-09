@@ -1,8 +1,12 @@
 SampleApp::Application.routes.draw do
+  get "home/index"
   resources :users do
     member do
       get :following, :followers
     end
+  end
+  resources :inquiries, :only => [:new, :create] do
+    get 'thank_you', :on => :collection
   end
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
